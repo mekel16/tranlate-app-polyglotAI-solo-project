@@ -1,6 +1,8 @@
-# 🌍 polyglotAI | Solo Project
+##polyglotAi
 
-**polyglotAI** adalah proyek solo dari course *Scrimba AI Engineering Path* sub bagian _intro to Ai Enginering_, hanya diberikan goals dari proect lalu di kerjakan solo, project ini berfokus pada **penggunaan dan deployment API secara aman** dan beberapa bagian yang aman di backend **cloudflare workers**s erta **pemahaman mendalam terhadap arsitektur request API**.
+---
+
+project ini berfokus pada **penggunaan dan deployment API secara aman** dan beberapa bagian yang aman di backend **cloudflare workers**s erta **pemahaman mendalam terhadap arsitektur request API**.
 
 ---
 "The project looks simple, but the tricky part was hiding the API and keeping the prompt secret on the backend."
