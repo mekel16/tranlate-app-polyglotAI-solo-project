@@ -67,5 +67,5 @@
 
 ---
 
-![image](https://github.com/user-attachments/assets/2976d886-37d6-43fa-ab79-34d95a478126)
+![Cuplikan layar_25-5-2025_191335_mich-translateapp-solo-project-polyglot pages dev](https://github.com/user-attachments/assets/48817964-555a-456e-a284-bb93ec5edf14)
 
