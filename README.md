@@ -5,7 +5,7 @@
 ---
 ## ✨ Preview
 
-🔗 [Live Demo](https://polyglot-tranlator-openaiapi.pages.dev/)
+🔗 [Live Demo](https://mich-translateapp-solo-project-polyglot.pages.dev/)
 📦 [GitHub Repo](https://github.com/mekel16/polyglotAI-solo-Project)
 
 ---
