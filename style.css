@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #fdfbfb;
+}
+
+.centering_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
+.centering_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 3em;
+    padding-right: 3em;
+}
+
+.centering_container img{
+    width: 100%;
+    max-width: 80px;
+    height: auto;
+}
+
+.up_down {
+    display: row;
+    justify-content: center;
+    align-items: right;
+}
