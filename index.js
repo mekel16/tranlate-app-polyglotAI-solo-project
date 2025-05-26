@@ -55,7 +55,7 @@ export default {
 
     const openai = new OpenAI({
       apiKey: env.OPENAI_API_KEY,
-      baseURL: 'https://gateway.ai.cloudflare.com/v1/cb10c4f1f7394e965bb7a19aab91e4d6/ai-mich-gateway/openai'
+      baseURL: 'url gatewai cloudflare'
     });
 
     try {
