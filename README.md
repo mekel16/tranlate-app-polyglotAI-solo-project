@@ -4,15 +4,15 @@
 
 ## 📑 Daftar Isi
 
-1. [✨ Preview](#-preview)
-2. [🚀 Tujuan Proyek](#-tujuan-proyek)
-3. [🛠️ Fitur Utama](#-fitur-utama)
-4. [🧪 Teknologi yang Digunakan](#-teknologi-yang-digunakan)
-5. [📚 Pembelajaran Utama](#-pembelajaran-utama)
-6. [🡩‍💻 Author](#-author)
+1. [✨ Preview](#preview)
+2. [🚀 Tujuan Proyek](#tujuan-proyek)
+3. [🛠️ Fitur Utama](#fitur-utama)
+4. [🧪 Teknologi yang Digunakan](#teknologi-yang-digunakan)
+5. [📚 Pembelajaran Utama](#pembelajaran-utama)
+6. [🡩‍💻 Author](#author)
 7. [🖼️ Cuplikan Layar](#cuplikan-layar)
 8. [📄 Dokumentasi Kode JavaScript: `script.js` PolyglotAI](#dokumentasi-kode-javascript-scriptjs-polyglotai)
-9. [📄 Dokumentasi Kode Backend: `index.js` (Cloudflare Worker)](#dokumentasi-kode-backend-indexjs-cloudflare-worker)
+9. [📄 Dokumentasi Kode Backend: `indexjs-cloudflare-worker`](#dokumentasi-kode-backend-indexjs-cloudflare-worker)
 10. [🔒 Catatan Keamanan](#catatan-keamanan)
 11. [✅ Kesimpulan](#kesimpulan)
 
