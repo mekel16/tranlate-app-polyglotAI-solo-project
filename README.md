@@ -231,7 +231,6 @@ try {
 ## ✅ Kesimpulan
 
 Kode JavaScript ini merupakan client-side logic untuk aplikasi terjemahan berbasis AI yang aman, memastikan interaksi pengguna berjalan mulus, validasi input, dan komunikasi yang aman dengan backend serverless.
-
 ---
 
 ## dokumentasi workers(backend) index.js
