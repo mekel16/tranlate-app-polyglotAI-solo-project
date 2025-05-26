@@ -12,7 +12,7 @@
 6. [🡩‍💻 Author](#-author)
 7. [🖼️ Cuplikan Layar](#-cuplikan-layar)
 8. [📄 Dokumentasi Kode JavaScript: `script.js` PolyglotAI](#-dokumentasi-kode-javascript-scriptjs-polyglotai)
-9. [📄 Dokumentasi Kode Backend: `indexjs-cloudflare-worker`](#-dokumentasi-kode-backend-indexjs-cloudflare-worker)
+9.[📄 Dokumentasi Kode Backend: `indexjs-cloudflare-worker`](#-dokumentasi-kode-backend-indexjs-cloudflare-worker)
 10. [🔒 Catatan Keamanan](#-catatan-keamanan)
 11. [✅ Kesimpulan](#-kesimpulan)
 
