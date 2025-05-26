@@ -98,7 +98,7 @@ project ini berfokus pada **penggunaan dan deployment API secara aman** dan bebe
 ![Cuplikan layar_25-5-2025_191335_mich-translateapp-solo-project-polyglot pages dev](https://github.com/user-attachments/assets/48817964-555a-456e-a284-bb93ec5edf14)
 
 ---
-# Dokumentasi Kode JavaScript: `index.js` PolyglotAI
+# Dokumentasi Kode JavaScript: `script.js` PolyglotAI
 
 Dokumentasi ini menjelaskan fungsi, alur kerja, dan penjelasan kode JavaScript utama pada aplikasi PolyglotAI.
 
