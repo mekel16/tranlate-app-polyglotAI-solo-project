@@ -1,37 +1,33 @@
 # POLYGLOTAI
 
 ---
+
 ## 📑 Daftar Isi
 
-### 1. Frontend
-- [✨ Preview](#-preview)
-- [🚀 Tujuan Proyek](#-tujuan-proyek)
-- [🛠️ Fitur Utama](#️-fitur-utama)
-- [🧪 Teknologi yang Digunakan](#-teknologi-yang-digunakan)
-- [📚 Pembelajaran Utama](#-pembelajaran-utama)
-- [🡩‍💻 Author](#author)
-- [🖼️ Cuplikan Layar](#cuplikan-layar_25-5-2025_191335_mich-translateapp-solo-project-polyglot-pages-dev)
-- [📄 Dokumentasi Kode Frontend: `script.js`](#Dokumentasi Kode JavaScript: `script.js` PolyglotAI)
-
-### 2. Backend
-- [📄 Dokumentasi Kode Backend: `index.js` (Cloudflare Worker)](#dokumentasi-kode-backend-indexjs-cloudflare-worker)
-
-- [🔒 Catatan Keamanan](#catatan-keamanan)
-- [✅ Kesimpulan](#kesimpulan)
-    
----
+1. [✨ Preview](#-preview)
+2. [🚀 Tujuan Proyek](#-tujuan-proyek)
+3. [🛠️ Fitur Utama](#-fitur-utama)
+4. [🧪 Teknologi yang Digunakan](#-teknologi-yang-digunakan)
+5. [📚 Pembelajaran Utama](#-pembelajaran-utama)
+6. [🡩‍💻 Author](#-author)
+7. [🖼️ Cuplikan Layar](#cuplikan-layar)
+8. [📄 Dokumentasi Kode JavaScript: `script.js` PolyglotAI](#dokumentasi-kode-javascript-scriptjs-polyglotai)
+9. [📄 Dokumentasi Kode Backend: `index.js` (Cloudflare Worker)](#dokumentasi-kode-backend-indexjs-cloudflare-worker)
+10. [🔒 Catatan Keamanan](#catatan-keamanan)
+11. [✅ Kesimpulan](#kesimpulan)
 
 ---
 
-project ini berfokus pada **penggunaan dan deployment API secara aman** dan beberapa bagian yang aman di backend **cloudflare workers**s erta **pemahaman mendalam terhadap arsitektur request API**.
+project ini berfokus pada **penggunaan dan deployment API secara aman** dan beberapa bagian yang aman di backend **cloudflare workers** serta **pemahaman mendalam terhadap arsitektur request API**.
 
 ---
 "The project looks simple, but the tricky part was hiding the API and keeping the prompt secret on the backend."
 
 ---
+
 ## ✨ Preview
 
-🔗 [Live Demo](https://mich-translateapp-solo-project-polyglot.pages.dev/)
+🔗 [Live Demo](https://mich-translateapp-solo-project-polyglot.pages.dev/)  
 📦 [GitHub Repo](https://github.com/mekel16/polyglotAI-solo-Project)
 
 ---
@@ -47,11 +43,10 @@ project ini berfokus pada **penggunaan dan deployment API secara aman** dan bebe
 
 ## 🛠️ Fitur Utama
 
-* 🔐 **Secure Deployment**
+* 🔐 **Secure Deployment**  
   Menggunakan teknik environment variables & server-side logic untuk menjaga kerahasiaan API Key.
 
 * 🧠 **Structured OpenAI API Usage**
-
   * **Dependencies**: Instalasi library yang dibutuhkan
   * **Request Structure**: Cara menyusun permintaan ke model
   * **Models**: Penggunaan model `gpt-4o-mini`
@@ -59,7 +54,6 @@ project ini berfokus pada **penggunaan dan deployment API secara aman** dan bebe
   * **Token Handling**: Mengelola batas token dalam permintaan
 
 * 🎯 **Prompt Engineering Implementation**
-
   * **Temperature**: Mengontrol kreativitas output model
   * **Few-shot Approach**: Memberikan contoh pada prompt untuk hasil lebih relevan
   * **Stop Sequences**: Menghentikan output di titik tertentu
@@ -75,40 +69,43 @@ project ini berfokus pada **penggunaan dan deployment API secara aman** dan bebe
 
 ---
 
-
 ## 📚 Pembelajaran Utama
 
-✅ Best practice dalam penggunaan API secara **aman dan efisien**
-✅ Meningkatkan kemampuan dalam **Prompt Engineering**
-✅ Memahami **struktur komunikasi dengan LLM** (Large Language Models)
+✅ Best practice dalam penggunaan API secara **aman dan efisien**  
+✅ Meningkatkan kemampuan dalam **Prompt Engineering**  
+✅ Memahami **struktur komunikasi dengan LLM** (Large Language Models)  
 ✅ Membuat aplikasi AI yang siap *production*
 
 ---
+
 ## 🡩‍💻 Author
 
 **Michael Pallea**
 
-🔗 [Portfolio](https://mekel16.github.io/michael_portofolio_website/)
+🔗 [Portfolio](https://mekel16.github.io/michael_portofolio_website/)  
 📧 Email: [mekelpallea@gmail.com](mailto:mekelpallea@gmail.com)
 
 ---
 
+## 🖼️ Cuplikan Layar
+
 ![Cuplikan layar_25-5-2025_191335_mich-translateapp-solo-project-polyglot pages dev](https://github.com/user-attachments/assets/48817964-555a-456e-a284-bb93ec5edf14)
 
 ---
-# Dokumentasi Kode JavaScript: `script.js` PolyglotAI
+
+## 📄 Dokumentasi Kode JavaScript: `script.js` PolyglotAI
 
 Dokumentasi ini menjelaskan fungsi, alur kerja, dan penjelasan kode JavaScript utama pada aplikasi PolyglotAI.
 
 ---
 
-## Ringkasan Fungsi
+### Ringkasan Fungsi
 
 Script ini bertugas mengelola interaksi pengguna pada halaman web, melakukan validasi input, mengirim permintaan ke backend untuk proses terjemahan, dan menampilkan hasil terjemahan ke pengguna.
 
 ---
 
-## Alur Kerja Utama
+### Alur Kerja Utama
 
 1. **Menunggu Halaman Siap**
    - Kode dijalankan setelah seluruh dokumen HTML ter-load penuh (`DOMContentLoaded`).
@@ -125,9 +122,9 @@ Script ini bertugas mengelola interaksi pengguna pada halaman web, melakukan val
 
 ---
 
-## Penjelasan Kode Tiap Bagian
+### Penjelasan Kode Tiap Bagian
 
-### 1. Inisialisasi Komponen DOM
+#### 1. Inisialisasi Komponen DOM
 
 ```javascript
 const translateBtn = document.getElementById("translateBtn");
@@ -137,7 +134,7 @@ const resultBox = document.getElementById("resultBox");
 
 ---
 
-### 2. Event Listener untuk Tombol Translate
+#### 2. Event Listener untuk Tombol Translate
 
 ```javascript
 translateBtn.addEventListener("click", async () => {
@@ -148,7 +145,7 @@ translateBtn.addEventListener("click", async () => {
 
 ---
 
-### 3. Mengambil Input User dan Validasi
+#### 3. Mengambil Input User dan Validasi
 
 ```javascript
 const textInput = document.getElementById("text");
@@ -185,7 +182,7 @@ if (!allowedTargets.includes(selectedLanguage)) {
 
 ---
 
-### 4. Mengirim Permintaan ke Backend
+#### 4. Mengirim Permintaan ke Backend
 
 ```javascript
 try {
@@ -207,7 +204,7 @@ try {
 
 ---
 
-### 5. Penanganan Response & Error Handling
+#### 5. Penanganan Response & Error Handling
 
 ```javascript
   if (data.error) {
@@ -232,16 +229,21 @@ try {
 
 ---
 
-## Catatan Keamanan
+## 📄 Dokumentasi Kode Backend: `index.js` (Cloudflare Worker)
+
+*(Bagian ini tambahkan dokumentasi backend kamu di sini jika sudah tersedia)*
+
+---
+
+## 🔒 Catatan Keamanan
 
 - API key tidak pernah ada di frontend; permintaan dari frontend ke backend saja.
 - Backend bertanggung jawab penuh untuk menyimpan rahasia dan memanggil OpenAI API.
 
 ---
 
-## Kesimpulan
+## ✅ Kesimpulan
 
 Kode JavaScript ini merupakan client-side logic untuk aplikasi terjemahan berbasis AI yang aman, memastikan interaksi pengguna berjalan mulus, validasi input, dan komunikasi yang aman dengan backend serverless.
 
 ---
-
