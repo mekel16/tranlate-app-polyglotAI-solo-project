@@ -4,7 +4,7 @@
 
 ## 📑 Daftar Isi
 
-1. [✨ Preview](##Preview)
+1. [✨ Preview](#-preview)
 2. [🚀 Tujuan Proyek](#tujuan-proyek)
 3. [🛠️ Fitur Utama](#fitur-utama)
 4. [🧪 Teknologi yang Digunakan](#teknologi-yang-digunakan)
