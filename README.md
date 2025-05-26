@@ -1,6 +1,29 @@
 # POLYGLOTAI
 
 ---
+## 📑 Daftar Isi
+
+1. [✨ Preview](#-preview)
+2. [🚀 Tujuan Proyek](#-tujuan-proyek)
+3. [🛠️ Fitur Utama](#️-fitur-utama)
+4. [🧪 Teknologi yang Digunakan](#-teknologi-yang-digunakan)
+5. [📚 Pembelajaran Utama](#-pembelajaran-utama)
+6. [🡩‍💻 Author](#author)
+7. [🖼️ Cuplikan Layar](#cuplikan-layar_25-5-2025_191335_mich-translateapp-solo-project-polyglot-pages-dev)
+8. [📄 Dokumentasi Kode JavaScript: `index.js`](#dokumentasi-kode-javascript-indexjs-polyglotai)
+    - [Ringkasan Fungsi](#ringkasan-fungsi)
+    - [Alur Kerja Utama](#alur-kerja-utama)
+    - [Penjelasan Kode Tiap Bagian](#penjelasan-kode-tiap-bagian)
+        - [Inisialisasi Komponen DOM](#1-inisialisasi-komponen-dom)
+        - [Event Listener untuk Tombol Translate](#2-event-listener-untuk-tombol-translate)
+        - [Mengambil Input User dan Validasi](#3-mengambil-input-user-dan-validasi)
+        - [Mengirim Permintaan ke Backend](#4-mengirim-permintaan-ke-backend)
+        - [Penanganan Response & Error Handling](#5-penanganan-response--error-handling)
+9. [🔒 Catatan Keamanan](#catatan-keamanan)
+10. [✅ Kesimpulan](#kesimpulan)
+---
+
+---
 
 project ini berfokus pada **penggunaan dan deployment API secara aman** dan beberapa bagian yang aman di backend **cloudflare workers**s erta **pemahaman mendalam terhadap arsitektur request API**.
 
