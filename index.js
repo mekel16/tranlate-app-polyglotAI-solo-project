@@ -1,67 +1,91 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const translateBtn = document.getElementById("translateBtn");
-  const resultBox = document.getElementById("resultBox");
+import OpenAI from "openai";
 
-  translateBtn.addEventListener("click", async () => {
-    const textInput = document.getElementById("text");
-    const text = textInput ? textInput.value : "";
-    const languageRadios = document.getElementsByName("language");
-    let selectedLanguage = null;
+const ALLOWED_LANGUAGES = {
+  japan: "Japanese",
+  french: "French",
+  spain: "Spanish"
+};
 
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type'
+};
 
-    if (typeof text !== "string" || !text.trim()) {
-      alert("Please enter some text.");
-      return;
+export default {
+  async fetch(request, env, ctx) {
+    if (request.method === "OPTIONS") {
+      return new Response(null, { headers: corsHeaders });
+    }
+
+    if (request.method !== "POST") {
+      return new Response("Method Not Allowed", { status: 405, headers: corsHeaders });
+    }
+
+    let reqBody;
+    try {
+      reqBody = await request.json();
+    } catch (e) {
+      return new Response(JSON.stringify({ error: "Invalid JSON" }), {
+        status: 400,
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
+      });
     }
 
 
-    for (let radio of languageRadios) {
-      if (radio.checked) {
-        selectedLanguage = radio.value;
-        break;
-      }
+    const { text, target } = reqBody;
+    if (
+      typeof text !== "string" ||
+      !text.trim() ||
+      typeof target !== "string" ||
+      !(target in ALLOWED_LANGUAGES)
+    ) {
+      return new Response(JSON.stringify({ error: "Invalid input" }), {
+        status: 400,
+        headers: { ...corsHeaders, "Content-Type": "application/json" }
+      });
     }
-    if (!selectedLanguage) {
-      alert("Please select a language.");
-      return;
-    }
-  
-    const allowedTargets = ['japan', 'french', 'spain'];
-    if (!allowedTargets.includes(selectedLanguage)) {
-      alert("Invalid language selected.");
-      return;
-    }
+
+    const prompt = `Translate the following indonesian text to ${ALLOWED_LANGUAGES[target]}:`;
+
+    const messages = [
+      { role: "system", content: prompt },
+      { role: "user", content: text }
+    ];
+
+    const openai = new OpenAI({
+      apiKey: env.OPENAI_API_KEY,
+      baseURL: 'https://gateway.ai.cloudflare.com/v1/cb10c4f1f7394e965bb7a19aab91e4d6/ai-mich-gateway/openai'
+    });
 
     try {
-      const url = "https://my-openai-api-worker.michp.workers.dev/";
-
-      const response = await fetch(url, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          text: text,
-          target: selectedLanguage
-        })
+      const chatCompletion = await openai.chat.completions.create({
+        model: 'gpt-4o-mini',
+        messages,
+        temperature: 1.0,
+        presence_penalty: 0,
+        frequency_penalty: 0
       });
 
-      const data = await response.json();
-
-      if (data.error) {
-        resultBox.innerText = "Error: " + data.error;
-      } else if (data.choices && data.choices[0]?.message?.content) {
-        const translatedText = data.choices[0].message.content;
-        resultBox.innerText = translatedText;
-      } else {
-        resultBox.innerText = "Unexpected response format.";
-      }
-      resultBox.style.display = "block";
-
-    } catch (error) {
-      console.error("Translation failed:", error);
-      resultBox.innerText = "Something went wrong during translation.";
-      resultBox.style.display = "block";
+      return new Response(JSON.stringify({
+        choices: chatCompletion.choices
+      }), {
+        headers: {
+          ...corsHeaders,
+          'Content-Type': 'application/json'
+        }
+      });
+    } catch (e) {
+      return new Response(
+        JSON.stringify({ error: e.message || String(e) }),
+        {
+          headers: {
+            ...corsHeaders,
+            'Content-Type': 'application/json'
+          },
+          status: 500
+        }
+      );
     }
-  });
-});
+  }
+};
