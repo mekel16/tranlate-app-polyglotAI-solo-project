@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     try {
-      const url = "https://my-openai-api-worker.michp.workers.dev/";
+      const url = "url workerss";
 
       const response = await fetch(url, {
         method: 'POST',
