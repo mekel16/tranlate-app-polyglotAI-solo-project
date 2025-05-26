@@ -247,3 +247,64 @@ try {
 Kode JavaScript ini merupakan client-side logic untuk aplikasi terjemahan berbasis AI yang aman, memastikan interaksi pengguna berjalan mulus, validasi input, dan komunikasi yang aman dengan backend serverless.
 
 ---
+
+## dokumentasi workers(backend) index.js
+
+Aplikasi backend sederhana untuk menerjemahkan teks dari bahasa Indonesia ke beberapa bahasa asing menggunakan OpenAI GPT API. Endpoint ini dapat digunakan sebagai backend untuk aplikasi front-end atau integrasi lainnya.
+
+Fitur
+Mendukung translasi dari bahasa Indonesia ke:
+Jepang (japan)
+Prancis (french)
+Spanyol (spain)
+Menggunakan model GPT-4o-mini dari OpenAI
+Mendukung CORS (bisa diakses dari aplikasi web mana saja)
+Penanganan error yang jelas dan informatif
+Cara Kerja
+Endpoint menerima request POST dengan format JSON yang berisi teks dan target bahasa.
+API hanya menerima bahasa target: japan, french, dan spain.
+Response berupa hasil translasi dari OpenAI GPT.
+Contoh Request
+bash
+curl -X POST 'https://<YOUR-WORKER-URL>' \
+  -H "Content-Type: application/json" \
+  -d '{"text":"Selamat pagi", "target":"french"}'
+Request Body
+Field	Tipe	Deskripsi
+text	string	Teks dalam bahasa Indonesia yang akan diterjemahkan
+target	string	Kode bahasa tujuan: japan, french, atau spain
+Response Sukses
+JSON
+{
+  "choices": [
+    {
+      "message": {
+        "role": "assistant",
+        "content": "Bonjour"
+      }
+    }
+  ]
+}
+Response Error
+JSON
+{
+  "error": "Invalid input"
+}
+Konfigurasi Lingkungan
+Pastikan environment variable berikut tersedia saat deploy:
+
+OPENAI_API_KEY: Kunci API dari OpenAI
+Struktur Kode Utama
+index.js adalah entry point utama.
+Menggunakan package openai untuk akses API GPT.
+Konfigurasi kunci API OpenAI menggunakan environment variable.
+URL endpoint OpenAI sudah diatur untuk Cloudflare Gateway.
+Daftar Bahasa yang Didukung
+Kode	Bahasa
+japan	Japanese
+french	French
+spain	Spanish
+Catatan
+Endpoint hanya menerima method POST dan OPTIONS (CORS).
+Untuk pengembangan lebih lanjut, kamu bisa menambah dukungan bahasa pada variabel ALLOWED_LANGUAGES di dalam kode.
+
