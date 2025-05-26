@@ -74,3 +74,153 @@ project ini berfokus pada **penggunaan dan deployment API secara aman** dan bebe
 
 ![Cuplikan layar_25-5-2025_191335_mich-translateapp-solo-project-polyglot pages dev](https://github.com/user-attachments/assets/48817964-555a-456e-a284-bb93ec5edf14)
 
+---
+# Dokumentasi Kode JavaScript: `index.js` PolyglotAI
+
+Dokumentasi ini menjelaskan fungsi, alur kerja, dan penjelasan kode JavaScript utama pada aplikasi PolyglotAI.
+
+---
+
+## Ringkasan Fungsi
+
+Script ini bertugas mengelola interaksi pengguna pada halaman web, melakukan validasi input, mengirim permintaan ke backend untuk proses terjemahan, dan menampilkan hasil terjemahan ke pengguna.
+
+---
+
+## Alur Kerja Utama
+
+1. **Menunggu Halaman Siap**
+   - Kode dijalankan setelah seluruh dokumen HTML ter-load penuh (`DOMContentLoaded`).
+2. **Event Listener Tombol**
+   - Mendengarkan klik pada tombol "Translate".
+3. **Validasi Input**
+   - Mengecek apakah teks sudah diisi dan bahasa target sudah dipilih.
+   - Hanya mengizinkan bahasa: `japan`, `french`, `spain`.
+4. **Kirim Request ke Backend**
+   - Mengirim data teks dan bahasa target menggunakan metode `POST` ke endpoint backend (Cloudflare Worker).
+5. **Tampilkan Hasil**
+   - Jika sukses, menampilkan hasil terjemahan.
+   - Jika gagal, menampilkan pesan error.
+
+---
+
+## Penjelasan Kode Tiap Bagian
+
+### 1. Inisialisasi Komponen DOM
+
+```javascript
+const translateBtn = document.getElementById("translateBtn");
+const resultBox = document.getElementById("resultBox");
+```
+- Mengambil elemen tombol translate dan kotak hasil dari halaman HTML.
+
+---
+
+### 2. Event Listener untuk Tombol Translate
+
+```javascript
+translateBtn.addEventListener("click", async () => {
+  // Proses terjemahan berjalan di sini
+});
+```
+- Ketika user menekan tombol "Translate", fungsi asinkron dijalankan.
+
+---
+
+### 3. Mengambil Input User dan Validasi
+
+```javascript
+const textInput = document.getElementById("text");
+const text = textInput ? textInput.value : "";
+const languageRadios = document.getElementsByName("language");
+let selectedLanguage = null;
+
+// Validasi apakah teks sudah diisi
+if (typeof text !== "string" || !text.trim()) {
+  alert("Please enter some text.");
+  return;
+}
+
+// Mencari bahasa yang dipilih
+for (let radio of languageRadios) {
+  if (radio.checked) {
+    selectedLanguage = radio.value;
+    break;
+  }
+}
+if (!selectedLanguage) {
+  alert("Please select a language.");
+  return;
+}
+
+const allowedTargets = ['japan', 'french', 'spain'];
+if (!allowedTargets.includes(selectedLanguage)) {
+  alert("Invalid language selected.");
+  return;
+}
+```
+- Mengecek input teks dan pilihan bahasa.
+- Jika tidak valid, akan mengeluarkan alert dan menghentikan proses.
+
+---
+
+### 4. Mengirim Permintaan ke Backend
+
+```javascript
+try {
+  const url = "https://my-openai-api-worker.michp.workers.dev/";
+
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      text: text,
+      target: selectedLanguage
+    })
+  });
+
+  const data = await response.json();
+  // Penanganan hasil response di bawah
+```
+- Mengirim request POST ke backend dengan payload berisi teks dan target bahasa.
+
+---
+
+### 5. Penanganan Response & Error Handling
+
+```javascript
+  if (data.error) {
+    resultBox.innerText = "Error: " + data.error;
+  } else if (data.choices && data.choices[0]?.message?.content) {
+    const translatedText = data.choices[0].message.content;
+    resultBox.innerText = translatedText;
+  } else {
+    resultBox.innerText = "Unexpected response format.";
+  }
+  resultBox.style.display = "block";
+} catch (error) {
+  console.error("Translation failed:", error);
+  resultBox.innerText = "Something went wrong during translation.";
+  resultBox.style.display = "block";
+}
+```
+- Jika response backend berisi error, tampilkan error.
+- Jika ada hasil terjemahan, tampilkan hasil.
+- Jika format response tidak sesuai, tampilkan pesan error.
+- Jika terjadi error pada proses fetch, tampilkan pesan error umum.
+
+---
+
+## Catatan Keamanan
+
+- API key tidak pernah ada di frontend; permintaan dari frontend ke backend saja.
+- Backend bertanggung jawab penuh untuk menyimpan rahasia dan memanggil OpenAI API.
+
+---
+
+## Kesimpulan
+
+Kode JavaScript ini merupakan client-side logic untuk aplikasi terjemahan berbasis AI yang aman, memastikan interaksi pengguna berjalan mulus, validasi input, dan komunikasi yang aman dengan backend serverless.
+
+---
+
