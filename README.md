@@ -34,7 +34,7 @@ project ini berfokus pada **penggunaan dan deployment API secara aman** dan bebe
 
 ## 🚀 Tujuan Proyek
 
-* Mempelajari dan mempraktikkan **cara mengkonsumsi API (khususnya OpenAI API)** secara aman di sisi frontend maupun backend.
+* Mempelajari dan mempraktikkan **cara menggunakab API (khususnya OpenAI API)** secara aman di sisi frontend maupun backend.
 * Menjaga **keamanan informasi sensitif seperti API Key** saat aplikasi di-*deploy*.
 * Menerapkan berbagai konsep teknikal dari sisi API seperti: *dependencies*, *requests*, *models*, *messages array*, dan *tokens*.
 * Menerapkan teknik **Prompt Engineering** yang efektif untuk meningkatkan kualitas output dari model AI.
@@ -78,14 +78,6 @@ project ini berfokus pada **penggunaan dan deployment API secara aman** dan bebe
 
 ---
 
-## 🡩‍💻 Author
-
-**Michael Pallea**
-
-🔗 [Portfolio](https://mekel16.github.io/michael_portofolio_website/)  
-📧 Email: [mekelpallea@gmail.com](mailto:mekelpallea@gmail.com)
-
----
 
 ## 🖼️ Cuplikan Layar
 
@@ -245,5 +237,14 @@ Kode JavaScript ini merupakan client-side logic untuk aplikasi terjemahan berbas
 ## dokumentasi workers(backend) index.js
 
 ---
+## 🡩‍💻 Author
+
+**Michael Pallea**
+
+🔗 [Portfolio](https://mekel16.github.io/michael_portofolio_website/)  
+📧 Email: [mekelpallea@gmail.com](mailto:mekelpallea@gmail.com)
+
+---
+
 
 
