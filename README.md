@@ -178,7 +178,7 @@ if (!allowedTargets.includes(selectedLanguage)) {
 
 ```javascript
 try {
-  const url = "https://my-openai-api-worker.michp.workers.dev/";
+  const url = "url worker";
 
   const response = await fetch(url, {
     method: 'POST',
