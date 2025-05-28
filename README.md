@@ -3,7 +3,12 @@
 
 this is my first project in AI enginering. haha look simplee but i try my best for this one.😁👌
 
-This project focuses on using the openAI API. If we want to deploy it, the API must be securely stored (it cannot be seen and stays private) every time there is a request to the API
+> This project focuses on using the openAI API. If we want to deploy it, the API must be securely stored (it cannot be seen and stays private) every time there is a request to the API
+
+## ✨ Preview
+
+🔗 [Live Demo](https://mich-translateapp-solo-project-polyglot.pages.dev/)  
+📦 [GitHub Repo](https://github.com/mekel16/polyglotAI-solo-Project)
 
 
 ---
@@ -18,20 +23,6 @@ This project focuses on using the openAI API. If we want to deploy it, the API m
 6. [📄`script.js` documentation](#-dokumentasi-kode-javascript-scriptjs-polyglotai)
 7.  [📄 `index.js` documentation](#dokumentasi-workersbackend-indexjs)
 8. [✅ conclusion](#-kesimpulan)
-
----
-
-project ini berfokus pada **penggunaan dan deployment API secara aman** dan beberapa bagian yang aman di backend **cloudflare workers** serta **pemahaman mendalam terhadap arsitektur request API**.
-
----
-"The project looks simple, but the tricky part was hiding the API and keeping the prompt secret on the backend."
-
----
-
-## ✨ Preview
-
-🔗 [Live Demo](https://mich-translateapp-solo-project-polyglot.pages.dev/)  
-📦 [GitHub Repo](https://github.com/mekel16/polyglotAI-solo-Project)
 
 ---
 
