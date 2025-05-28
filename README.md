@@ -8,19 +8,16 @@ This project focuses on using the openAI API. If we want to deploy it, the API m
 
 ---
 
-## 📑 Daftar Isi
+## 📑 Table of Content
 
 1. [✨ Preview](#-preview)
-2. [🚀 Tujuan Proyek](#-tujuan-proyek)
-3. [🛠️ Fitur Utama](#-fitur-utama)
-4. [🧪 Teknologi yang Digunakan](#-teknologi-yang-digunakan)
-5. [📚 Pembelajaran Utama](#-pembelajaran-utama)
-6. [🡩‍💻 Author](#-author)
-7. [🖼️ Cuplikan Layar](#-cuplikan-layar)
-8. [📄 Dokumentasi Kode JavaScript: `script.js` PolyglotAI](#-dokumentasi-kode-javascript-scriptjs-polyglotai)
-9.  [📄 Dokumentasi Kode Backend: `index.js`](#dokumentasi-workersbackend-indexjs)
-10. [🔒 Catatan Keamanan](#-catatan-keamanan)
-11. [✅ Kesimpulan](#-kesimpulan)
+2. [🚀 Project Goals](#-tujuan-proyek)
+3. [🛠️ Key Feature](#-fitur-utama)
+4. [🧪 Tools used](#-teknologi-yang-digunakan)
+5. [📚 Key Learning](#-pembelajaran-utama)
+6. [📄`script.js` documentation](#-dokumentasi-kode-javascript-scriptjs-polyglotai)
+7.  [📄 `index.js` documentation](#dokumentasi-workersbackend-indexjs)
+8. [✅ conclusion](#-kesimpulan)
 
 ---
 
