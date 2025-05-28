@@ -1,4 +1,7 @@
-# POLYGLOTAI
+# Translator Using Open AI API
+---
+
+this is my first project in AI enginering. haha look simplee but i try my best for this one.😁👌
 
 ---
 
