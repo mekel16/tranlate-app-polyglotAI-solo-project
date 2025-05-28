@@ -67,7 +67,7 @@ project ini berfokus pada **penggunaan dan deployment API secara aman** dan bebe
 ## 🧪 Teknologi yang Digunakan
 
 * **Frontend**: HTML, CSS, JavaScript
-* **Backend**: .js file yang berjalan di Cloudflare (Cloudflare Workers)
+* **Backend**: JavaScript and Cloudflare(database)
 * **API**: [OpenAI GPT API](https://platform.openai.com/docs)
 
 ---
