@@ -1,13 +1,18 @@
 # Solo Project Translator Using Open AI API
+
 ---
+
 <img src="https://github.com/mekel16/tranlate-app-polyglotAI-solo-project/blob/main/core%20requierment.jpeg" alt="description" width="300" height="300">
+
 ---
 
 this is my first project in AI engineering. haha, looks simple but I try my best for this one. 😁👌
 
 > ** This project focuses on using the OpenAI API. If we want to deploy it, the API must be stored securely (it can't be seen and must stay private) every time there is a request to the API **
 
-Tools I Use:
+---
+
+## 🛠️ Tools I Use
 
 <p align="left">
   <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Cloudflare_Logo.svg" alt="Cloudflare" height="80"/>
@@ -21,21 +26,23 @@ Tools I Use:
 
 ## ✨ Preview
 
-🔗 [Live Demo](https://mich-translateapp-solo-project-polyglot.pages.dev/)  
-📦 [GitHub Repo](https://github.com/mekel16/polyglotAI-solo-Project)
+- 🔗 [Live Demo](https://mich-translateapp-solo-project-polyglot.pages.dev/)  
+- 📦 [GitHub Repo](https://github.com/mekel16/polyglotAI-solo-Project)
 
 ---
 
 ## 📑 Table of Content
 
 1. [✨ Preview](#-preview)
-2. [🚀 Project Goals](#-project-goalas)
+2. [🚀 Project Goals](#-project-goals)
 3. [🛠️ Key Feature](#-key-feature)
-4. [🧪 Tools used](#-technology-used)
-5. [📚 Key Learning](#-main-learning)
-6. [📄`script.js` documentation](#-javascript-scriptjs-documentation-polyglotai)
-7. [📄 `index.js` documentation](#documentation-cloudflare-worker-indexjs-for-translator-app)
-8. [✅ conclusion](#-conclusion)
+4. [🧪 Technology Used](#-technology-used)
+5. [📚 Main Learning](#-main-learning)
+6. [🖼️ Screenshots](#-screenshots)
+7. [📄 JavaScript `script.js` Documentation PolyglotAI](#-javascript-scriptjs-documentation-polyglotai)
+8. [Documentation: Cloudflare Worker `index.js` for Translator App](#documentation-cloudflare-worker-indexjs-for-translator-app)
+9. [✅ Conclusion](#-conclusion)
+10. [🡩‍💻 Author](#author)
 
 ---
 
@@ -94,8 +101,6 @@ Tools I Use:
 ## 📄 JavaScript `script.js` Documentation PolyglotAI
 
 This documentation explains the function, workflow, and main JavaScript code in PolyglotAI app.
-
----
 
 ### Function Summary
 
@@ -240,13 +245,13 @@ This JavaScript code is the client-side logic for an AI-based translator app tha
 
 ---
 
-# Documentation: Cloudflare Worker `index.js` for Translator App
+## Documentation: Cloudflare Worker `index.js` for Translator App
 
 This file is the main backend code for the translator app. It is written for deployment on Cloudflare Workers and connects to the OpenAI API for translating Indonesian text to Japanese, French, or Spanish.
 
 ---
 
-## 1. Import & Allowed Languages
+### 1. Import & Allowed Languages
 
 ```javascript
 import OpenAI from "openai";
@@ -257,14 +262,13 @@ const ALLOWED_LANGUAGES = {
   spain: "Spanish"
 };
 ```
-
 - We import the OpenAI library.
 - We define which languages are allowed for translation (Japanese, French, and Spanish).
 - The keys (`japan`, `french`, `spain`) are used on the frontend, and their values are the actual language names for OpenAI.
 
 ---
 
-## 2. CORS Headers
+### 2. CORS Headers
 
 ```javascript
 const corsHeaders = {
@@ -273,13 +277,12 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'Content-Type'
 };
 ```
-
 - These headers are for CORS (Cross-Origin Resource Sharing).
 - They allow requests from anywhere and let the browser send POST or OPTIONS requests with JSON.
 
 ---
 
-## 3. Export Default: The Worker Handler
+### 3. Export Default: The Worker Handler
 
 ```javascript
 export default {
@@ -288,38 +291,35 @@ export default {
   }
 };
 ```
-
 - The Worker exposes a `fetch` function that handles HTTP requests.
 - This is the entry point for every request to the Worker.
 
 ---
 
-## 4. Handle OPTIONS Method (For CORS Preflight)
+### 4. Handle OPTIONS Method (For CORS Preflight)
 
 ```javascript
 if (request.method === "OPTIONS") {
   return new Response(null, { headers: corsHeaders });
 }
 ```
-
 - If the browser sends an OPTIONS request (for CORS check), we respond with allowed headers.
 
 ---
 
-## 5. Only Allow POST Requests
+### 5. Only Allow POST Requests
 
 ```javascript
 if (request.method !== "POST") {
   return new Response("Method Not Allowed", { status: 405, headers: corsHeaders });
 }
 ```
-
 - Only POST requests are allowed (for translation).
 - Other HTTP methods will get a 405 error.
 
 ---
 
-## 6. Parse JSON Body
+### 6. Parse JSON Body
 
 ```javascript
 let reqBody;
@@ -332,13 +332,12 @@ try {
   });
 }
 ```
-
 - Try to parse the request body as JSON.
 - If parsing fails, return an error.
 
 ---
 
-## 7. Validate Input
+### 7. Validate Input
 
 ```javascript
 const { text, target } = reqBody;
@@ -354,14 +353,13 @@ if (
   });
 }
 ```
-
 - Check that `text` and `target` are strings.
 - Make sure `text` is not empty and `target` is one of the allowed languages.
 - If not, return an error.
 
 ---
 
-## 8. Build the Prompt and Messages
+### 8. Build the Prompt and Messages
 
 ```javascript
 const prompt = `Translate the following indonesian text to ${ALLOWED_LANGUAGES[target]}:`;
@@ -371,13 +369,12 @@ const messages = [
   { role: "user", content: text }
 ];
 ```
-
 - Build a prompt for the AI to translate from Indonesian to the target language.
 - Format the messages for the OpenAI chat completion endpoint.
 
 ---
 
-## 9. Create OpenAI Instance
+### 9. Create OpenAI Instance
 
 ```javascript
 const openai = new OpenAI({
@@ -385,14 +382,13 @@ const openai = new OpenAI({
   baseURL: 'url gatewai cloudflare'
 });
 ```
-
 - Create an OpenAI API instance.
 - Get the API key from the Worker environment (`env`).
 - The `baseURL` can be set to a proxy/gateway if needed.
 
 ---
 
-## 10. Call the OpenAI API
+### 10. Call the OpenAI API
 
 ```javascript
 const chatCompletion = await openai.chat.completions.create({
@@ -403,14 +399,13 @@ const chatCompletion = await openai.chat.completions.create({
   frequency_penalty: 0
 });
 ```
-
 - Make a call to OpenAI's chat completions endpoint.
 - Use the `gpt-4o-mini` model for translation.
 - Pass all the formatted messages and set parameters for creativity and repetition.
 
 ---
 
-## 11. Return the Result
+### 11. Return the Result
 
 ```javascript
 return new Response(JSON.stringify({
@@ -422,12 +417,11 @@ return new Response(JSON.stringify({
   }
 });
 ```
-
 - Return the AI's response as JSON, including CORS and content type headers.
 
 ---
 
-## 12. Error Handling
+### 12. Error Handling
 
 ```javascript
 } catch (e) {
@@ -443,12 +437,11 @@ return new Response(JSON.stringify({
   );
 }
 ```
-
 - If something goes wrong with the OpenAI call, catch the error and return it as JSON with status 500.
 
 ---
 
-## Summary
+### Summary
 
 - This code receives Indonesian text and a target language, checks the input, and sends a translation request to OpenAI.
 - It handles CORS, errors, and only allows POST requests.
@@ -462,7 +455,7 @@ The code is the backend code for my translator app. This backend is responsible 
 
 **Michael Pallea**
 
-🔗 [Portfolio](https://mekel16.github.io/michael_portofolio_website/)  
-📧 Email: [mekelpallea@gmail.com](mailto:mekelpallea@gmail.com)
+- 🔗 [Portfolio](https://mekel16.github.io/michael_portofolio_website/)  
+- 📧 Email: [mekelpallea@gmail.com](mailto:mekelpallea@gmail.com)
 
 ---
