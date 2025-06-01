@@ -1,14 +1,13 @@
 # Solo Project Translator Using Open AI API
 ---
-<img src="https://github.com/mekel16/tranlate-app-polyglotAI-solo-project/blob/main/core%20requierment.jpeg" alt="deskripsi" width="300" height="300">
+<img src="https://github.com/mekel16/tranlate-app-polyglotAI-solo-project/blob/main/core%20requierment.jpeg" alt="description" width="300" height="300">
 ---
 
-this is my first project in AI enginering. haha look simplee but i try my best for this one.😁👌
+this is my first project in AI engineering. haha, looks simple but I try my best for this one. 😁👌
 
-> ** This project focuses on using the openAI API. If we want to deploy it, the API must be securely stored (it cannot be seen and stays private) every time there is a request to the API **
+> ** This project focuses on using the OpenAI API. If we want to deploy it, the API must be stored securely (it can't be seen and must stay private) every time there is a request to the API **
 
-Tools i Use:
-
+Tools I Use:
 
 <p align="left">
   <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Cloudflare_Logo.svg" alt="Cloudflare" height="80"/>
@@ -25,128 +24,126 @@ Tools i Use:
 🔗 [Live Demo](https://mich-translateapp-solo-project-polyglot.pages.dev/)  
 📦 [GitHub Repo](https://github.com/mekel16/polyglotAI-solo-Project)
 
-
 ---
 
 ## 📑 Table of Content
 
 1. [✨ Preview](#-preview)
-2. [🚀 Project Goals](#-tujuan-proyek)
-3. [🛠️ Key Feature](#-fitur-utama)
-4. [🧪 Tools used](#-teknologi-yang-digunakan)
-5. [📚 Key Learning](#-pembelajaran-utama)
-6. [📄`script.js` documentation](#-dokumentasi-kode-javascript-scriptjs-polyglotai)
-7.  [📄 `index.js` documentation](#dokumentasi-workersbackend-indexjs)
-8. [✅ conclusion](#-kesimpulan)
+2. [🚀 Project Goals](#-project-goalas)
+3. [🛠️ Key Feature](#-key-feature)
+4. [🧪 Tools used](#-technology-used)
+5. [📚 Key Learning](#-main-learning)
+6. [📄`script.js` documentation](#-javascript-scriptjs-documentation-polyglotai)
+7. [📄 `index.js` documentation](#-workers-backend-indexjs-documentation)
+8. [✅ conclusion](#-conclusion)
 
 ---
 
-## 🚀 Tujuan Proyek
+## 🚀 Project Goals
 
-* Mempelajari dan mempraktikkan **cara menggunakab API (khususnya OpenAI API)** secara aman di sisi frontend maupun backend.
-* Menjaga **keamanan informasi sensitif seperti API Key** saat aplikasi di-*deploy*.
-* Menerapkan berbagai konsep teknikal dari sisi API seperti: *dependencies*, *requests*, *models*, *messages array*, dan *tokens*.
-* Menerapkan teknik **Prompt Engineering** yang efektif untuk meningkatkan kualitas output dari model AI.
+* Learn how to use API and deploy API securely with Cloudflare Workers.
+* Protect sensitive information like API key.
+* Apply some technical concepts from the OpenAI API side such as: *dependencies*, *requests*, *models*, *messages array*, and *tokens*.
+* Try to use **Prompt Engineering** to make better AI model output.
 
 ---
 
-## 🛠️ Fitur Utama
+## 🛠️ Key Feature
 
 * 🔐 **Secure Deployment**  
-  Menggunakan teknik environment variables & server-side logic untuk menjaga kerahasiaan API Key.
+  Using environment variables & server-side logic to keep the API Key secret.
 
 * 🧠 **Structured OpenAI API Usage**
-  * **Dependencies**: Instalasi library yang dibutuhkan
-  * **Request Structure**: Cara menyusun permintaan ke model
-  * **Models**: Penggunaan model `gpt-4o-mini`
-  * **Messages Array**: Format dialog yang dipakai (`system`, `user`, `assistant`)
-  * **Token Handling**: Mengelola batas token dalam permintaan
+  * **Dependencies**: Install the needed libraries
+  * **Request Structure**: How to make a request to the model
+  * **Models**: Use the `gpt-4o-mini` model
+  * **Messages Array**: The dialog format (`system`, `user`, `assistant`)
+  * **Token Handling**: Handle the token limit in the request
 
 * 🎯 **Prompt Engineering Implementation**
-  * **Temperature**: Mengontrol kreativitas output model
-  * **Few-shot Approach**: Memberikan contoh pada prompt untuk hasil lebih relevan
-  * **Stop Sequences**: Menghentikan output di titik tertentu
-  * **Presence & Frequency Penalty**: Mengatur keragaman dan pengulangan dalam hasil
+  * **Temperature**: Control the model's creativity
+  * **Few-shot Approach**: Give some examples in the prompt for more relevant result
+  * **Stop Sequences**: Stop the output at a certain point
+  * **Presence & Frequency Penalty**: Set the diversity and repetition in the result
 
 ---
 
-## 🧪 Teknologi yang Digunakan
+## 🧪 Technology Used
 
 * **Frontend**: HTML, CSS, JavaScript
-* **Backend**: JavaScript and Cloudflare(database)
+* **Backend**: JavaScript and Cloudflare (database)
 * **API**: [OpenAI GPT API](https://platform.openai.com/docs)
 
 ---
 
-## 📚 Pembelajaran Utama
+## 📚 Main Learning
 
-✅ Best practice dalam penggunaan API secara **aman dan efisien**  
-✅ Meningkatkan kemampuan dalam **Prompt Engineering**  
-✅ Memahami **struktur komunikasi dengan LLM** (Large Language Models)  
-✅ Membuat aplikasi AI yang siap *production*
-
----
-
-
-## 🖼️ Cuplikan Layar
-
-![Cuplikan layar_25-5-2025_191335_mich-translateapp-solo-project-polyglot pages dev](https://github.com/user-attachments/assets/48817964-555a-456e-a284-bb93ec5edf14)
+✅ Best practice for using API **safely and efficiently**  
+✅ Improve my skill in **Prompt Engineering**  
+✅ Understand the **structure of communication with LLM** (Large Language Models)  
+✅ Build an AI app that is ready for *production*
 
 ---
 
-## 📄 Dokumentasi Kode JavaScript: `script.js` PolyglotAI
+## 🖼️ Screenshots
 
-Dokumentasi ini menjelaskan fungsi, alur kerja, dan penjelasan kode JavaScript utama pada aplikasi PolyglotAI.
-
----
-
-### Ringkasan Fungsi
-
-Script ini bertugas mengelola interaksi pengguna pada halaman web, melakukan validasi input, mengirim permintaan ke backend untuk proses terjemahan, dan menampilkan hasil terjemahan ke pengguna.
+![Screenshot_25-5-2025_191335_mich-translateapp-solo-project-polyglot pages dev](https://github.com/user-attachments/assets/48817964-555a-456e-a284-bb93ec5edf14)
 
 ---
 
-### Alur Kerja Utama
+## 📄 JavaScript `script.js` Documentation PolyglotAI
 
-1. **Menunggu Halaman Siap**
-   - Kode dijalankan setelah seluruh dokumen HTML ter-load penuh (`DOMContentLoaded`).
-2. **Event Listener Tombol**
-   - Mendengarkan klik pada tombol "Translate".
-3. **Validasi Input**
-   - Mengecek apakah teks sudah diisi dan bahasa target sudah dipilih.
-   - Hanya mengizinkan bahasa: `japan`, `french`, `spain`.
-4. **Kirim Request ke Backend**
-   - Mengirim data teks dan bahasa target menggunakan metode `POST` ke endpoint backend (Cloudflare Worker).
-5. **Tampilkan Hasil**
-   - Jika sukses, menampilkan hasil terjemahan.
-   - Jika gagal, menampilkan pesan error.
+This documentation explains the function, workflow, and main JavaScript code in PolyglotAI app.
 
 ---
 
-### Penjelasan Kode Tiap Bagian
+### Function Summary
 
-#### 1. Inisialisasi Komponen DOM
+This script is for handling user interaction in the web page, validating input, sending requests to backend for translation, and showing the translation result to the user.
+
+---
+
+### Main Workflow
+
+1. **Wait for Page Ready**
+   - The code runs after all the HTML document is fully loaded (`DOMContentLoaded`).
+2. **Button Event Listener**
+   - Listen to click event on the "Translate" button.
+3. **Input Validation**
+   - Check if the text is filled and target language selected.
+   - Only allow languages: `japan`, `french`, `spain`.
+4. **Send Request to Backend**
+   - Send the text and target language to backend (Cloudflare Worker) with `POST` method.
+5. **Show Result**
+   - If success, show the translation result.
+   - If failed, show error message.
+
+---
+
+### Explanation of Each Code Part
+
+#### 1. DOM Component Initialization
 
 ```javascript
 const translateBtn = document.getElementById("translateBtn");
 const resultBox = document.getElementById("resultBox");
 ```
-- Mengambil elemen tombol translate dan kotak hasil dari halaman HTML.
+- Get the translate button and result box element from the HTML page.
 
 ---
 
-#### 2. Event Listener untuk Tombol Translate
+#### 2. Event Listener for Translate Button
 
 ```javascript
 translateBtn.addEventListener("click", async () => {
-  // Proses terjemahan berjalan di sini
+  // The translation process runs here
 });
 ```
-- Ketika user menekan tombol "Translate", fungsi asinkron dijalankan.
+- When user clicks the "Translate" button, an async function runs.
 
 ---
 
-#### 3. Mengambil Input User dan Validasi
+#### 3. Get User Input and Validation
 
 ```javascript
 const textInput = document.getElementById("text");
@@ -154,13 +151,13 @@ const text = textInput ? textInput.value : "";
 const languageRadios = document.getElementsByName("language");
 let selectedLanguage = null;
 
-// Validasi apakah teks sudah diisi
+// Check if text is filled
 if (typeof text !== "string" || !text.trim()) {
   alert("Please enter some text.");
   return;
 }
 
-// Mencari bahasa yang dipilih
+// Find the selected language
 for (let radio of languageRadios) {
   if (radio.checked) {
     selectedLanguage = radio.value;
@@ -178,12 +175,12 @@ if (!allowedTargets.includes(selectedLanguage)) {
   return;
 }
 ```
-- Mengecek input teks dan pilihan bahasa.
-- Jika tidak valid, akan mengeluarkan alert dan menghentikan proses.
+- Check the text input and chosen language.
+- If not valid, show alert and stop the process.
 
 ---
 
-#### 4. Mengirim Permintaan ke Backend
+#### 4. Send Request to Backend
 
 ```javascript
 try {
@@ -199,13 +196,13 @@ try {
   });
 
   const data = await response.json();
-  // Penanganan hasil response di bawah
+  // Response handling below
 ```
-- Mengirim request POST ke backend dengan payload berisi teks dan target bahasa.
+- Send a POST request to backend with text and target language as payload.
 
 ---
 
-#### 5. Penanganan Response & Error Handling
+#### 5. Response Handling & Error Handling
 
 ```javascript
   if (data.error) {
@@ -223,29 +220,30 @@ try {
   resultBox.style.display = "block";
 }
 ```
-- Jika response backend berisi error, tampilkan error.
-- Jika ada hasil terjemahan, tampilkan hasil.
-- Jika format response tidak sesuai, tampilkan pesan error.
-- Jika terjadi error pada proses fetch, tampilkan pesan error umum.
+- If backend responds with error, show the error.
+- If there is translation result, show the result.
+- If response format is not as expected, show error message.
+- If an error happens in fetch process, show general error message.
 
 ---
 
-## 🔒 Catatan Keamanan
+## 🔒 Security Notes
 
-- API key tidak pernah ada di frontend; permintaan dari frontend ke backend saja.
-- Backend bertanggung jawab penuh untuk menyimpan rahasia dan memanggil OpenAI API.
-
----
-
-## ✅ Kesimpulan
-
-Kode JavaScript ini merupakan client-side logic untuk aplikasi terjemahan berbasis AI yang aman, memastikan interaksi pengguna berjalan mulus, validasi input, dan komunikasi yang aman dengan backend serverless.
+- API key is never on frontend; request only goes to backend.
+- Backend is fully responsible to keep secret and call OpenAI API.
 
 ---
 
-## dokumentasi workers(backend) index.js
+## ✅ Conclusion
+
+This JavaScript code is the client-side logic for an AI-based translator app that is safe, makes sure user interaction is smooth, validates input, and communicates securely with serverless backend.
 
 ---
+
+## Workers (backend) index.js documentation
+
+---
+
 ## 🡩‍💻 Author
 
 **Michael Pallea**
@@ -254,6 +252,3 @@ Kode JavaScript ini merupakan client-side logic untuk aplikasi terjemahan berbas
 📧 Email: [mekelpallea@gmail.com](mailto:mekelpallea@gmail.com)
 
 ---
-
-
-
