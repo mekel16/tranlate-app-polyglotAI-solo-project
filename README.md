@@ -1,6 +1,7 @@
 # Solo Project Translator Using Open AI API
 ---
-<img src="https://github.com/mekel16/tranlate-app-polyglotAI-solo-project/blob/main/core%20requierment.jpeg" alt="deskripsi" width="300" height="200">
+<img src="https://github.com/mekel16/tranlate-app-polyglotAI-solo-project/blob/main/core%20requierment.jpeg" alt="deskripsi" width="300" height="300">
+
 ---
 
 this is my first project in AI enginering. haha look simplee but i try my best for this one.😁👌
