@@ -8,6 +8,18 @@ this is my first project in AI enginering. haha look simplee but i try my best f
 
 > This project focuses on using the openAI API. If we want to deploy it, the API must be securely stored (it cannot be seen and stays private) every time there is a request to the API
 
+Tools i Use:
+
+<p align="left">
+  <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Cloudflare_Logo.svg" alt="Cloudflare" height="40"/><br>
+  <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file:Unofficial_JavaScript_logo_2.svg" alt="JavaScript" height="40"/><br>
+  <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file:HTML5_logo_and_wordmark.svg" alt="HTML5" height="40"/><br>
+  <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file:CSS3_logo_and_wordmark.svg" alt="CSS3" height="40"/><br>
+  <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file:OpenAI_Logo.svg" alt="OpenAI API" height="40"/>
+</p>
+
+---
+
 ## ✨ Preview
 
 🔗 [Live Demo](https://mich-translateapp-solo-project-polyglot.pages.dev/)  
