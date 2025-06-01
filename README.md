@@ -87,7 +87,7 @@ Tools I Use:
 
 ## 🖼️ Screenshots
 
-<img src="https://github.com/user-attachments/assets/48817964-555a-456e-a284-bb93ec5edf14" alt="Screenshot" width="100">
+<img src="https://github.com/user-attachments/assets/48817964-555a-456e-a284-bb93ec5edf14" alt="Screenshot" width="500">
 
 ---
 
