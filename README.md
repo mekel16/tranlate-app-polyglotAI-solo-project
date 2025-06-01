@@ -5,7 +5,7 @@
 
 this is my first project in AI enginering. haha look simplee but i try my best for this one.😁👌
 
-> **This project focuses on using the openAI API. If we want to deploy it, the API must be securely stored (it cannot be seen and stays private) every time there is a request to the API
+**This project focuses on using the openAI API. If we want to deploy it, the API must be securely stored (it cannot be seen and stays private) every time there is a request to the API
 **
 
 Tools i Use:
