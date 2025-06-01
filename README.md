@@ -13,10 +13,6 @@ Tools i Use:
 
 <p align="left">
   <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Cloudflare_Logo.svg" alt="Cloudflare" height="40"/>
-  <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file:Unofficial_JavaScript_logo_2.svg" alt="JavaScript" height="40"/>
-  <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file:HTML5_logo_and_wordmark.svg" alt="HTML5" height="40"/>
-  <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file:CSS3_logo_and_wordmark.svg" alt="CSS3" height="40"/>
-  <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file:OpenAI_Logo.svg" alt="OpenAI API" height="40"/>
 </p>
 
 ---
