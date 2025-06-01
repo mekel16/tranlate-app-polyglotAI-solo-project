@@ -34,7 +34,7 @@ Tools I Use:
 4. [🧪 Tools used](#-technology-used)
 5. [📚 Key Learning](#-main-learning)
 6. [📄`script.js` documentation](#-javascript-scriptjs-documentation-polyglotai)
-7. [📄 `index.js` documentation](#-workers-backend-indexjs-documentation)
+7. [📄 `index.js` documentation](#documentation-cloudflare-worker-indexjs-for-translator-app)
 8. [✅ conclusion](#-conclusion)
 
 ---
