@@ -11,7 +11,7 @@ Tools i Use:
 
 
 <p align="left">
-  <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Cloudflare_Logo.svg" alt="Cloudflare" height="40"/>
+  <img src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Cloudflare_Logo.svg" alt="Cloudflare" height="80"/>
   <img src="https://github.com/user-attachments/assets/aa54bc3b-450f-465e-bf70-af2f0ba730c5" alt="VSCode" width="80"/>
   <img src="https://github.com/user-attachments/assets/be492517-5242-4510-80cf-5d6a9d01f51b" alt="OpenAI" width="80"/>
   <img src="https://github.com/user-attachments/assets/55396916-fc02-4fe5-997a-1c852825d931" alt="HTML5" width="80"/>
