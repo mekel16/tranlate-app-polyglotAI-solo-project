@@ -41,8 +41,7 @@ this is my first project in AI engineering. haha, looks simple but I try my best
 6. [🖼️ Screenshots](#-screenshots)
 7. [📄 JavaScript `script.js` Documentation PolyglotAI](#-javascript-scriptjs-documentation-polyglotai)
 8. [Documentation: Cloudflare Worker `index.js` for Translator App](#documentation-cloudflare-worker-indexjs-for-translator-app)
-9. [✅ Conclusion](#-conclusion)
-10. [🡩‍💻 Author](#author)
+9. [🡩‍💻 Author](#author)
 
 ---
 
@@ -232,16 +231,16 @@ try {
 
 ---
 
-## 🔒 Security Notes
+### 🔒 Security Notes
 
 - API key is never on frontend; request only goes to backend.
 - Backend is fully responsible to keep secret and call OpenAI API.
 
 ---
 
-## ✅ Conclusion
+### ✅ Conclusion for `script.js`
 
-This JavaScript code is the client-side logic for an AI-based translator app that is safe, makes sure user interaction is smooth, validates input, and communicates securely with serverless backend.
+This JavaScript code is the client-side logic for an AI-based translator app. It makes sure user interaction is smooth, input is validated, and all translation requests go securely to the backend, so the API key is never exposed in the frontend.
 
 ---
 
@@ -448,6 +447,12 @@ return new Response(JSON.stringify({
 - The translation is done securely on the backend, so the OpenAI API key is never exposed to the frontend.
 
 The code is the backend code for my translator app. This backend is responsible for keeping the OpenAI API key and the prompt safe in the Cloudflare environment (server side). The API key is stored securely, so it is never visible in the frontend or to users. All requests for translation are handled by this backend, so only the backend can access the OpenAI API directly.
+
+---
+
+### ✅ Conclusion for `index.js`
+
+The backend code (`index.js`) is responsible for all translation processing and for keeping the OpenAI API key safe inside the Cloudflare environment. It makes sure that only the backend can access the API key and talk to the OpenAI API, so your secret key never ends up in the frontend or with the user. This is a secure way to use AI APIs in a web app.
 
 ---
 
