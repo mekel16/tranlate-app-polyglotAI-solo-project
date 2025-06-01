@@ -87,7 +87,7 @@ Tools I Use:
 
 ## 🖼️ Screenshots
 
-![Screenshot_25-5-2025_191335_mich-translateapp-solo-project-polyglot pages dev](https://github.com/user-attachments/assets/48817964-555a-456e-a284-bb93ec5edf14)
+<img src="https://github.com/user-attachments/assets/48817964-555a-456e-a284-bb93ec5edf14" alt="Screenshot" width="100">
 
 ---
 
