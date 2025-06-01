@@ -1,6 +1,20 @@
 # Solo Project Translator Using Open AI API
 ---
 <img src="https://github.com/mekel16/tranlate-app-polyglotAI-solo-project/blob/main/core%20requierment.jpeg" alt="deskripsi" width="300" height="300">
+<img src="![icons8-visual-studio-code-48](https://github.com/user-attachments/assets/aa54bc3b-450f-465e-bf70-af2f0ba730c5)
+" alt="deskripsi" width="300" height="300">
+<img src="![3920311-middle](https://github.com/user-attachments/assets/be492517-5242-4510-80cf-5d6a9d01f51b)
+" alt="deskripsi" width="300" height="300">
+<img src="![icons8-html5-48](https://github.com/user-attachments/assets/55396916-fc02-4fe5-997a-1c852825d931)
+" alt="deskripsi" width="300" height="300">
+<img src="![icons8-javascript-48](https://github.com/user-attachments/assets/e1d32508-dba0-4578-86ff-5ae02377920a)
+" alt="deskripsi" width="300" height="300">
+
+
+
+
+
+
 
 ---
 
